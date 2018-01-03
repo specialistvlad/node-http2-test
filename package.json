@@ -1,0 +1,26 @@
+{
+  "name": "node-http2-test",
+  "private": false,
+  "dependencies": {
+    "babel-eslint": "^8.1.2",
+		"eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "lodash": "^4.17.4",
+    "nodemon": "^1.11.0",
+    "uuid": "^3.1.0",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=9"
+  },
+  "scripts": {
+    "dev": "echo \"try 'yarn run client' and 'yarn run server', don't forget about 'yarn run gen-keys'\"",
+    "client": "nodemon ./client",
+    "server": "nodemon ./server",
+    "lint": "yarn jslint",
+    "jslint:fix": "yarn jslint --fix",
+    "jslint": "eslint ./",
+    "gen-keys": "openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' -keyout localhost-privkey.pem -out localhost-cert.pem"
+  }
+}
